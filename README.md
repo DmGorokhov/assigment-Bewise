@@ -24,7 +24,8 @@ Details on installing and using the **Poetry** package are available in [officia
 
 To install **Poetry** you need **Python 3.7+** use the information from the official website [python.org](https://www.python.org/downloads/)
 
-To install **Docker**, use the information from the official website [docs.docker.com](https://docs.docker.com/engine/install/)
+To install **Docker**, use the information from the official website [docs.docker.com](https://docs.docker.com/engine/install/).
+If you have installed compose, make sure it is upgraded to V2 version.
 
 ---
 
@@ -42,7 +43,7 @@ Activate virtual environment
 poetry shell
 ```
 *Create .env file and set environment variables using file .env.example as example.
-For development purposes you can leave that variables as suggested in example.*
+For development purposes you can leave these variables as suggested in example.*
 
 Setup app
 ```bash
