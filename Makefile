@@ -1,5 +1,5 @@
-run-celery:
-	 celery -A R4C worker --loglevel=info & celery -A R4C flower
+install:
+	 poetry install
 
 migrations:
 	 docker exec -it app alembic revision --autogenerate
@@ -7,12 +7,18 @@ migrations:
 build:
 	docker compose build
 
+setup: install build
+
 start-dev:
 	docker compose up
 
 start-server:
 	poetry run uvicorn src.main:app --reload
 
+
+test:
+	poetry run pytest
+
 lint:
-		poetry run flake8 .
+	poetry run flake8 .
 
